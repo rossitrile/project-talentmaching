@@ -1,0 +1,9 @@
+/App/Talent.App.WebApp/appsettings.json
+/App/Talent.Api/appsettings.json
+/App/Talent.Services.Listing/appsettings.json
+/App/Talent.Services.Identity/appsettings.json
+/App/Talent.Services.Identity/appsettings.docker.json
+/App/Talent.Services.Profile/appsettings.json
+/App/Talent.Services.Profile/appsettings.docker.json
+
+

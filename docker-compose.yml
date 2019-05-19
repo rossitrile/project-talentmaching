@@ -1,0 +1,32 @@
+version: '3'
+services:
+  rabbitmq:
+    image: 'rabbitmq:3'
+  identity:
+    image: 'rossi93/project-competition-identity:latest'
+    depends_on:
+      - rabbitmq
+    ports:
+      - '60998:60998'
+  profile:
+    image: 'rossi93/project-competition-profile:latest'
+    depends_on:
+      - rabbitmq
+    ports:
+      - '60290:60290'
+  listing:
+    image: 'rossi93/project-competition-listing:latest'
+    depends_on:
+      - rabbitmq
+    ports:
+      - '51689:51689'
+  app:
+    image: 'rossi93/project-competition-app:latest'
+    ports:
+      - '80:61772'
+  api-gate:
+    image: 'rossi93/api-gate:mvc-competition'
+    environment:
+      - ASPNETCORE_URLS=http://*:3000
+    ports:
+      - '3000:3000'
