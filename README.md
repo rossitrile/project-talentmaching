@@ -1,8 +1,36 @@
-## Talent Competition Code Repository
+## Talent Standard Task Code Repository
 
 This project will help interns at MVP Studio to understand how ReactJs, C# Web Api, MongoDb is used in Talent Code Architecture. 
 
-Please follow the instructions below to understand how to get started. If you have any questions, please check if it's asked on QuestionHub or raise the question there to get support. 
+Please follow the instructions below to understand how to get started. If you have any questions, please check if it has been asked on QuestionHub or raise the question there to get support. 
+
+## Standard tasks
+
+* Module 1 : Talent profile page
+  * LinkedIn url & GitHub url
+  * Description
+  * User Details Component
+  * Address
+  * Nationality
+  * Languages
+  * Skills
+  * Work experience
+  * Visa status
+  * Job seeking status
+  * Photo upload
+
+[Click here](http://git.mvp.studio/talent-standard-tasks/talent-standard-tasks/wikis/guides/standard-task-module1) for Module 1 details.
+
+  * Module 2 : Talent Feed page
+  * Front-end
+    * Add ajax calls to retrieve data from the controllers
+  * Back-end 
+    * Build action methods in controllers and in services to fetch data from the database
+	
+[Click here](http://git.mvp.studio/talent-standard-tasks/talent-standard-tasks/wikis/guides/standard-task-module2) for Module 2 details.
+
+
+## Guides to get started
 
 ### React tutorials/resources
 * https://reactjs.org/docs/hello-world.html
@@ -63,22 +91,3 @@ Install npm util packages:
 
 ### How to connect to the database
 [Click here](http://git.mvp.studio/talent-competition/talent-competition/wikis/guides/mongo-db) for more details.
-
-## Competition task
-
-[Click here](http://git.mvp.studio/talent-competition/talent-competition/wikis/guides/competition-task) for more details.
-
-* Task 1 : Employer profile page
-  * Add last name to the primary contact details
-  * Allow users to edit company contact details by clicking on the edit button
-  * Display the user's full name on primary contact details (for read only display)
-
-* Task 2 : Manage Job page
-  * Display jobs as a list of cards
-  * Bonus/Optional: Update a job, Close a job
-* Submitting tasks
-  * Please submit tasks the same way you did for Onboarding:
-  * Upload code to your personal GitHub account
-  * Deploy a copy to Azure
-  * Notify your mentor using the industryconnect.io internship portal
-
