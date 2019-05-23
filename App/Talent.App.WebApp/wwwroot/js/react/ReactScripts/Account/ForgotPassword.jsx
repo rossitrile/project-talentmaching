@@ -4,6 +4,8 @@ import { Select } from '../Form/Select.jsx'
 import { CheckBox } from '../Form/CheckBox.jsx'
 import { FormErrors } from '../Form/FormErrors.jsx'
 
+import { authenticationEndpoint } from '../Services/httpService'
+
 export default class ForgotPassword extends React.Component {
   constructor(props) {
     super(props)
@@ -32,7 +34,7 @@ export default class ForgotPassword extends React.Component {
     var forgotPasswordModel = { email: this.state.email }
 
     $.ajax({
-      url: '/authentication/authentication/forgetpassword',
+      url: `${authenticationEndpoint}/authentication/authentication/forgetpassword`,
       type: 'POST',
       data: JSON.stringify(forgotPasswordModel),
       contentType: 'application/json',

@@ -1,0 +1,11 @@
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/bin/Debug/netcoreapp2.0/Talent.App.WebApp.deps.json
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/bin/Debug/netcoreapp2.0/Talent.App.WebApp.runtimeconfig.json
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/bin/Debug/netcoreapp2.0/Talent.App.WebApp.runtimeconfig.dev.json
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/bin/Debug/netcoreapp2.0/Talent.App.WebApp.dll
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/bin/Debug/netcoreapp2.0/Talent.App.WebApp.pdb
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/obj/Debug/netcoreapp2.0/Talent.App.WebApp.csprojAssemblyReference.cache
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/obj/Debug/netcoreapp2.0/Talent.App.WebApp.csproj.CoreCompileInputs.cache
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/obj/Debug/netcoreapp2.0/Talent.App.WebApp.AssemblyInfoInputs.cache
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/obj/Debug/netcoreapp2.0/Talent.App.WebApp.AssemblyInfo.cs
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/obj/Debug/netcoreapp2.0/Talent.App.WebApp.dll
+/Users/lemagictri/Desktop/Project/IndustryConnect/talent-competition/App/Talent.App.WebApp/obj/Debug/netcoreapp2.0/Talent.App.WebApp.pdb

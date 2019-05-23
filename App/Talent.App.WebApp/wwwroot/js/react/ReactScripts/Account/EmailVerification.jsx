@@ -6,6 +6,8 @@ import { userNavigation } from './UserNavigation.jsx'
 import { FormErrors } from '../Form/FormErrors.jsx'
 import Cookies from 'js-cookie'
 
+import { authenticationEndpoint } from '../Services/httpService'
+
 export class EmailVerification extends React.Component {
   constructor(props) {
     super(props)
@@ -75,7 +77,7 @@ export class EmailVerification extends React.Component {
   verifyEmail() {
     this.setState({ isLoading: true })
     $.ajax({
-      url: '/authentication/authentication/resendVerificationLink',
+      url: `${authenticationEndpoint}/authentication/authentication/resendVerificationLink`,
       type: 'POST',
       data: JSON.stringify(this.state.email),
       contentType: 'application/json',

@@ -8,6 +8,8 @@ import FormItemWrapper from '../Form/FormItemWrapper.jsx'
 import NotificationSetting from './NotificationSetting.jsx'
 import AccountSetting from './AccountSetting.jsx'
 
+import { authenticationEndpoint } from '../Services/httpService'
+
 export default class UserAccountSetting extends React.Component {
   constructor(props) {
     super(props)
@@ -52,7 +54,7 @@ export default class UserAccountSetting extends React.Component {
     if (field == 'name') {
       $.ajax({
         url:
-          '/authentication/authentication/changeUserName?userName=' +
+          `${authenticationEndpoint}/authentication/authentication/changeUserName?userName=` +
           this.state.userName,
         type: 'POST',
         headers: {
@@ -78,8 +80,7 @@ export default class UserAccountSetting extends React.Component {
     if (field == 'password') {
       let data = this.state.password
       $.ajax({
-        url:
-          'http://localhost:60998/authentication/authentication/changePassword',
+        url: `${authenticationEndpoint}/authentication/authentication/changePassword`,
         type: 'POST',
         data: JSON.stringify(data),
         headers: {
@@ -108,8 +109,7 @@ export default class UserAccountSetting extends React.Component {
     }
     if (field == 'deactivate') {
       $.ajax({
-        url:
-          'http://localhost:60998/authentication/authentication/deactivateAccount',
+        url: `${authenticationEndpoint}/authentication/authentication/deactivateAccount`,
         type: 'POST',
         headers: {
           Authorization: 'Bearer ' + cookies,
@@ -136,8 +136,7 @@ export default class UserAccountSetting extends React.Component {
   getUserRole() {
     const cookies = Cookies.get('talentAuthToken')
     $.ajax({
-      url:
-        'http://localhost:60998/authentication/authentication/getAccountSettingInfo',
+      url: `${authenticationEndpoint}/authentication/authentication/getAccountSettingInfo`,
       type: 'GET',
       headers: {
         Authorization: 'Bearer ' + cookies,

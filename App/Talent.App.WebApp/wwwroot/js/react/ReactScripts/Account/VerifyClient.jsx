@@ -6,6 +6,8 @@ import { SingleInput } from '../Form/SingleInput.jsx'
 import Cookies from 'js-cookie'
 import { userNavigation } from './UserNavigation.jsx'
 
+import { authenticationEndpoint } from '../Services/httpService'
+
 export default class VerifyClient extends React.Component {
   constructor(props) {
     super(props)
@@ -55,7 +57,7 @@ export default class VerifyClient extends React.Component {
       clientEmail,
       resetPasswordToken
     }
-    let url = `/authentication/authentication/verifyClientToken?recruiterEmail=${recruiterEmail}&clientEmail=${clientEmail}&resetPasswordToken=${resetPasswordToken}`
+    let url = `${authenticationEndpoint}/authentication/authentication/verifyClientToken?recruiterEmail=${recruiterEmail}&clientEmail=${clientEmail}&resetPasswordToken=${resetPasswordToken}`
     $.ajax({
       url: url,
       type: 'POST',
@@ -152,7 +154,7 @@ export default class VerifyClient extends React.Component {
       resetPasswordToken
     } = this.state
 
-    let resetUrl = `http://localhost:60998/authentication/authentication/validateInvitation?recruiterEmail=${recruiterEmail}&clientEmail=${clientEmail}&resetPasswordToken=${resetPasswordToken}`
+    let resetUrl = `${authenticationEndpoint}/authentication/authentication/validateInvitation?recruiterEmail=${recruiterEmail}&clientEmail=${clientEmail}&resetPasswordToken=${resetPasswordToken}`
 
     $.ajax({
       url: resetUrl,

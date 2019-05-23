@@ -1,7 +1,8 @@
 ﻿import React from 'react'
-import ReactDOM from 'react-dom'
 import NavigationBar from './NavigationBar.jsx'
 import Cookies from 'js-cookie'
+
+import { profileEndpoint } from '../Services/httpService'
 
 export class LoggedInNavigation extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export class LoggedInNavigation extends React.Component {
   isUserAuthenticated() {
     var cookies = Cookies.get('talentAuthToken')
     $.ajax({
-      url: '/profile/profile/isUserAuthenticated',
+      url: `${profileEndpoint}/profile/profile/isUserAuthenticated`,
       headers: {
         Authorization: 'Bearer ' + cookies,
         'Content-Type': 'application/json'

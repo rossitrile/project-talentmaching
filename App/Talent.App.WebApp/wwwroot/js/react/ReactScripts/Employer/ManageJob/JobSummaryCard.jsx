@@ -4,6 +4,8 @@ import { Popup, Icon, Card, Button, Confirm } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 
+import { listingEndpoint } from '../../Services/httpService'
+
 export class JobSummaryCard extends React.Component {
   constructor(props) {
     super(props)
@@ -19,7 +21,7 @@ export class JobSummaryCard extends React.Component {
   selectJob() {
     var cookies = Cookies.get('talentAuthToken')
     const { chosenJobId: id } = this.state
-    const url = '/listing/listing/closeJob'
+    const url = listingEndpoint + '/listing/listing/closeJob'
     $.ajax({
       url,
       headers: {

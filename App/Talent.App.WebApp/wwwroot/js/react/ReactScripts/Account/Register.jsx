@@ -3,6 +3,7 @@ import { SingleInput } from '../Form/SingleInput.jsx'
 import { CheckBox } from '../Form/CheckBox.jsx'
 import { RadioButton } from './RadioButton.jsx'
 
+import { authenticationEndpoint } from '../Services/httpService'
 const options = [
   { key: 'm', text: 'Male', value: 'male' },
   { key: 'f', text: 'Female', value: 'female' }
@@ -55,7 +56,7 @@ export default class Register extends React.Component {
     }
 
     $.ajax({
-      url: '/authentication/authentication/signup',
+      url: `${authenticationEndpoint}/authentication/authentication/signup`,
       type: 'POST',
       data: JSON.stringify(registerModel),
       contentType: 'application/json',

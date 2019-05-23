@@ -14,6 +14,8 @@ import {
 } from './ContactDetail.jsx'
 import { BodyWrapper, loaderData } from '../Layout/BodyWrapper.jsx'
 
+import { profileEndpoint } from '../Services/httpService'
+
 export default class EmployeeProfile extends React.Component {
   constructor(props) {
     super(props)
@@ -55,7 +57,7 @@ export default class EmployeeProfile extends React.Component {
   loadData() {
     var cookies = Cookies.get('talentAuthToken')
     $.ajax({
-      url: '/profile/profile/getEmployerProfile',
+      url: `${profileEndpoint}/profile/profile/getEmployerProfile`,
       headers: {
         Authorization: 'Bearer ' + cookies,
         'Content-Type': 'application/json'
@@ -166,7 +168,7 @@ export default class EmployeeProfile extends React.Component {
   saveData() {
     var cookies = Cookies.get('talentAuthToken')
     $.ajax({
-      url: 'http://localhost:60290/profile/profile/saveEmployerProfile',
+      url: `${profileEndpoint}/profile/profile/saveEmployerProfile`,
       headers: {
         Authorization: 'Bearer ' + cookies,
         'Content-Type': 'application/json'

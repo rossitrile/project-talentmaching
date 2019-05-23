@@ -3,6 +3,8 @@ import Cookies from 'js-cookie'
 import { userNavigation } from '../Account/UserNavigation.jsx'
 import queryString from 'query-string'
 
+import { authenticationEndpoint } from '../Services/httpService'
+
 export default class EmailConfirmation extends React.Component {
   constructor(props) {
     super(props)
@@ -21,7 +23,10 @@ export default class EmailConfirmation extends React.Component {
   componentDidMount() {
     //verifyEmail
     $.ajax({
-      url: '/authentication/authentication/' + this.state.pagetype,
+      url:
+        authenticationEndpoint +
+        '/authentication/authentication/' +
+        this.state.pagetype,
       type: 'GET',
       contentType: 'application/json',
       dataType: 'json',

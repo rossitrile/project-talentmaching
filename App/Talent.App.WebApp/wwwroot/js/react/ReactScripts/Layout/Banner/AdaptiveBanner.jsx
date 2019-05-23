@@ -11,6 +11,8 @@ import PropTypes from 'prop-types'
 import LoggedInBanner from './LoggedInBanner.jsx'
 import LoggedOutBanner from './LoggedOutBanner.jsx'
 
+import { profileEndpoint } from '../../Services/httpService'
+
 export default class AdaptiveBanner extends React.Component {
   constructor(props) {
     super(props)
@@ -41,7 +43,7 @@ export default class AdaptiveBanner extends React.Component {
   isUserAuthenticated() {
     var cookies = Cookies.get('talentAuthToken')
     $.ajax({
-      url: '/profile/profile/isUserAuthenticated',
+      url: `${profileEndpoint}/profile/profile/isUserAuthenticated`,
       headers: {
         Authorization: 'Bearer ' + cookies,
         'Content-Type': 'application/json'

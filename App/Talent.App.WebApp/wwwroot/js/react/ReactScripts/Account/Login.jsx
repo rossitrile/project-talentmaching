@@ -7,6 +7,8 @@ import { FormErrors } from '../Form/FormErrors.jsx'
 import Cookies from 'js-cookie'
 import { EmailVerification } from './EmailVerification.jsx'
 
+import { authenticationEndpoint } from '../Services/httpService'
+
 export default class LoginForm extends React.Component {
   constructor(props) {
     super(props)
@@ -97,7 +99,7 @@ export default class LoginForm extends React.Component {
     }
 
     $.ajax({
-      url: '/authentication/authentication/signin',
+      url: `${authenticationEndpoint}/authentication/authentication/signin`,
       type: 'POST',
       data: JSON.stringify(loginModel),
       contentType: 'application/json',

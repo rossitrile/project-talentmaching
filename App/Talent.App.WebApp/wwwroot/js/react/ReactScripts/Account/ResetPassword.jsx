@@ -4,6 +4,8 @@ import { SingleInput } from '../Form/SingleInput.jsx'
 import { Select } from '../Form/Select.jsx'
 import { FormErrors } from '../Form/FormErrors.jsx'
 
+import { authenticationEndpoint } from '../Services/httpService'
+
 export default class ResetPassword extends React.Component {
   constructor(props) {
     super(props)
@@ -45,7 +47,7 @@ export default class ResetPassword extends React.Component {
       Email: email,
       Token: token
     }
-    let url = `/authentication/authentication/verifyResetPasswordToken?o=${email}&p=${token}`
+    let url = `${authenticationEndpoint}/authentication/authentication/verifyResetPasswordToken?o=${email}&p=${token}`
     $.ajax({
       url: url,
       type: 'POST',

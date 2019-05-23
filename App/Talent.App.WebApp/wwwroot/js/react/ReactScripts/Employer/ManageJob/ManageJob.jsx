@@ -19,6 +19,8 @@ import {
   Label
 } from 'semantic-ui-react'
 
+import { listingEndpoint } from '../../Services/httpService'
+
 const sortOptions = [
   {
     key: 'asc',
@@ -123,7 +125,8 @@ export default class ManageJob extends React.Component {
       `showUnexpired=${filter.showUnexpired}`,
       `activePage=${activePage}`
     ].join('&')
-    let url = '/listing/listing/getSortedEmployerJobs?' + query
+    let url =
+      listingEndpoint + '/listing/listing/getSortedEmployerJobs?' + query
     let cookies = Cookies.get('talentAuthToken')
     // your ajax call and other logic goes here
 
@@ -271,7 +274,6 @@ export default class ManageJob extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <BodyWrapper reload={this.init} loaderData={this.state.loaderData}>
         <div className="ui container">

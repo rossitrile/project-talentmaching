@@ -13,6 +13,8 @@ import { JobDescription } from './JobDescription.jsx'
 import { JobSummary } from './JobSummary.jsx'
 import { BodyWrapper, loaderData } from '../../Layout/BodyWrapper.jsx'
 
+import { listingEndpoint } from '../../Services/httpService'
+
 export default class CreateJob extends React.Component {
   constructor(props) {
     super(props)
@@ -73,8 +75,9 @@ export default class CreateJob extends React.Component {
     if (param != '' || copyJobParam != '') {
       var link =
         param != ''
-          ? '/listing/listing/GetJobByToEdit?id=' + param
-          : '/listing/listing/GetJobForCopy?id=' + copyJobParam
+          ? `${listingEndpoint}/listing/listing/GetJobByToEdit?id=` + param
+          : `${listingEndpoint}/listing/listing/GetJobForCopy?id=` +
+            copyJobParam
       var cookies = Cookies.get('talentAuthToken')
       $.ajax({
         url: link,
@@ -117,7 +120,7 @@ export default class CreateJob extends React.Component {
 
     var cookies = Cookies.get('talentAuthToken')
     $.ajax({
-      url: '/listing/listing/createUpdateJob',
+      url: `${listingEndpoint}/listing/listing/createUpdateJob`,
       headers: {
         Authorization: 'Bearer ' + cookies,
         'Content-Type': 'application/json'
